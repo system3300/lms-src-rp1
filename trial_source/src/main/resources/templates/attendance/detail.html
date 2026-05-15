@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>勤怠情報変更｜LMS</title>
+
 </head>
 <body>
 
@@ -87,6 +88,9 @@
 			return hours + ':' + minutes;
 		}
 	</script>
-
+	<!--js-->
+	<script th:if="${notEnterFlg}">
+	    alert('過去日の勤怠に未入力があります。');
+	</script>
 </body>
 </html>

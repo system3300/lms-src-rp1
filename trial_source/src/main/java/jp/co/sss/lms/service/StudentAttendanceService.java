@@ -1,7 +1,6 @@
 package jp.co.sss.lms.service;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -209,11 +208,11 @@ public class StudentAttendanceService {
 	 * 	Task25 過去日の未入力チェック
 	 */
 	public boolean notEnterCheck() throws ParseException {
-		final Integer courseId = loginUserDto.getCourseId();
-		final Integer lmsUserId = loginUserDto.getLmsUserId();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+		//SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
 		Date trainingDate = attendanceUtil.getTrainingDate();
-		Integer count = tStudentAttendanceMapper.notEnterCount(lmsUserId, Constants.DB_FLG_FALSE, trainingDate);
+		//sdf.format(trainingDate);
+		Integer count = tStudentAttendanceMapper.notEnterCount(loginUserDto.getLmsUserId(), Constants.DB_FLG_FALSE,
+				trainingDate);
 		if (count > 0) {
 			System.out.println("未入力あり");
 			return true;
