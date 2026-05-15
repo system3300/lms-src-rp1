@@ -205,7 +205,10 @@ public class StudentAttendanceService {
 	}
 
 	/**
-	 * 	Task25 過去日の未入力チェック
+	 * 	過去日の未入力チェック
+	 * @author 松浦公彦 - Task.25
+	 * @return 過去日の未入力情報
+	 * @throws ParseException
 	 */
 	public boolean notEnterCheck() throws ParseException {
 		//SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
