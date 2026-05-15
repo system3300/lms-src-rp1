@@ -47,6 +47,9 @@ public class AttendanceController {
 				.getAttendanceManagement(loginUserDto.getCourseId(), loginUserDto.getLmsUserId());
 		model.addAttribute("attendanceManagementDtoList", attendanceManagementDtoList);
 
+		//Task25
+		//studentAttendanceService.notEnterCheck();
+
 		return "attendance/detail";
 	}
 
